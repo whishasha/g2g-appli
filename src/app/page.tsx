@@ -1,8 +1,9 @@
+'use client' //enables interaction with the page
 import { useEffect } from "react";
 import Image from "next/image";
 
 export default function Home() {
-  'use client' //enables interaction with the page
+
   useEffect(() => { //installs service worker from /sw.js in public dir.
     navigator.serviceWorker
       .register("/sw.js")
