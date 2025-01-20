@@ -1,7 +1,6 @@
 run npm install if you wish to configure this in a developer environment
 (installs packages from package.json)
 
-
 npm run dev hosts the website locally
 
 basepath is "/"

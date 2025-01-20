@@ -6,7 +6,7 @@ export default function Home() {
 
   useEffect(() => { //installs service worker from /sw.js in public dir.
     navigator.serviceWorker
-      .register("/sw.js")
+      .register("g2g-appli/sw.js")
       .then((registration) =>
         console.log(
           "Service Worker registration successful with scope: ",
