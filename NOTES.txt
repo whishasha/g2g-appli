@@ -1,0 +1,13 @@
+run npm install if you wish to configure this in a developer environment
+(installs packages from package.json)
+
+
+npm run dev hosts the website locally
+
+basepath is "/"
+
+dynamic routing IS possible
+
+adding sw: https://github.com/vercel/next.js/blob/canary/examples/with-service-worker/README.md
+
+client & server components: https://react.dev/reference/rsc/use-client#when-to-use-use-client
