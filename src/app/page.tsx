@@ -1,6 +1,20 @@
+'use client' //client-side 
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => { //installs service worker from /sw.js in public dir.
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then((registration) =>
+        console.log(
+          "Service Worker registration successful with scope: ",
+          registration.scope,
+        ),
+      )
+      .catch((err) => console.log("Service Worker registration failed: ", err));
+  }, []);
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
@@ -28,7 +42,7 @@ export default function Home() {
           >
             <Image
               className="dark:invert"
-              src="/g2g-appli/vercel.svg"
+              src="/g2g-appli/fumo.svg"
               alt="Vercel logomark"
               width={20}
               height={20}
